@@ -1,0 +1,11 @@
+.notifications-container { position: fixed; z-index: 9999; pointer-events: none; display:flex; flex-direction:column; gap:10px; padding:12px; }
+.notifications-container.top-right { top: 12px; right: 12px; align-items:flex-end; pointer-events:auto; }
+.notification { min-width:260px; max-width:360px; background:#fff; border-radius:8px; padding:10px 12px; box-shadow:0 8px 24px rgba(2,6,23,0.08); border-left:6px solid transparent; pointer-events: auto; }
+.notification .n-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+.notification .n-body { font-size:0.95rem; color:#334155; }
+.notification .close { background:transparent; border:0; cursor:pointer; font-size:14px; color:#475569; }
+.notification.success { border-left-color: #16a34a; }
+.notification.error { border-left-color: #dc2626; }
+.notification.info { border-left-color: #0ea5e9; }
+.notification.warning { border-left-color: #f59e0b; }
+.notification.custom { border-left-color: #7c3aed; background: linear-gradient(180deg,#faf5ff,#fff); }
