@@ -1,4 +1,6 @@
 # React Notifications Demo
+<img width="276" height="411" alt="image" src="https://github.com/user-attachments/assets/a1fed75c-15fe-469b-a26e-1bd64d0b1441" />
+
 
 A tiny Vite + React demo showing basic notification types (success, error, info, warning, custom).
 Includes:
