@@ -8,6 +8,26 @@ Includes:
 - NotificationsContainer component
 - Auto-dismiss and manual close
 
+- # React Notifications — Enhanced Demo
+
+An extended React + Vite notification system supporting:
+- Multiple notification types: **success**, **error**, **info**, **warning**, **custom**
+- Custom positions: **top-left**, **top-right**, **bottom-left**, **bottom-right**
+- Entry/exit animations
+- Icons per notification type
+- Optional action button (e.g., "Undo", "Retry")
+- Auto-dismiss with configurable duration
+- Manual close button
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Install dependencies
+```bash
+npm install
+
+
 Run locally:
 1. npm install
 2. npm run dev
