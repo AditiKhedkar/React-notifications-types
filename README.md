@@ -33,4 +33,8 @@ Run locally:
 2. npm run dev
 3. Open the address printed by Vite (usually http://localhost:5173)
 
-This project is intentionally dependency-light so it's easy to study and extend.
+
+---
+
+
+
