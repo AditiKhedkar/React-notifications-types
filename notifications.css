@@ -1,11 +1,71 @@
-.notifications-container { position: fixed; z-index: 9999; pointer-events: none; display:flex; flex-direction:column; gap:10px; padding:12px; }
-.notifications-container.top-right { top: 12px; right: 12px; align-items:flex-end; pointer-events:auto; }
-.notification { min-width:260px; max-width:360px; background:#fff; border-radius:8px; padding:10px 12px; box-shadow:0 8px 24px rgba(2,6,23,0.08); border-left:6px solid transparent; pointer-events: auto; }
-.notification .n-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
-.notification .n-body { font-size:0.95rem; color:#334155; }
-.notification .close { background:transparent; border:0; cursor:pointer; font-size:14px; color:#475569; }
+.notifications-container {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+}
+
+.notifications-container.top-right { top: 12px; right: 12px; align-items: flex-end; pointer-events: auto; }
+.notifications-container.top-left { top: 12px; left: 12px; align-items: flex-start; pointer-events: auto; }
+.notifications-container.bottom-right { bottom: 12px; right: 12px; align-items: flex-end; pointer-events: auto; }
+.notifications-container.bottom-left { bottom: 12px; left: 12px; align-items: flex-start; pointer-events: auto; }
+
+.notification {
+  min-width: 260px;
+  max-width: 360px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.08);
+  border-left: 6px solid transparent;
+  pointer-events: auto;
+  animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in forwards;
+  animation-delay: 0s, var(--duration, 3.7s);
+}
+
+.notification.animate {
+  --duration: 3.7s;
+}
+
+.notification .n-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.n-icon {
+  margin-right: 6px;
+}
+
+.notification .n-body { font-size: 0.95rem; color: #334155; }
+.notification .close { background: transparent; border: 0; cursor: pointer; font-size: 14px; color: #475569; }
+
 .notification.success { border-left-color: #16a34a; }
 .notification.error { border-left-color: #dc2626; }
 .notification.info { border-left-color: #0ea5e9; }
 .notification.warning { border-left-color: #f59e0b; }
 .notification.custom { border-left-color: #7c3aed; background: linear-gradient(180deg,#faf5ff,#fff); }
+
+.n-action {
+  margin-top: 8px;
+}
+.n-action button {
+  background: #2563eb;
+  color: white;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateX(100%); }
+}
